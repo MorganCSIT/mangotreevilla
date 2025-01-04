@@ -1,0 +1,94 @@
+
+@import url("fontawesome-all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    margin: none;
+}
+
+h2#makebigger {
+    font-size: 140%;
+}
+i#quote {
+    font-size: 120%;
+}
+tr.fruitroomselection {
+    display: inline-flex;
+    border: none;
+    background-color: teal;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: inherit;
+}
+
+p.fruitroomname {
+    text-align: center;
+    margin: unset;
+    margin-bottom: 1em;
+    font-family: 'Lobster', 'cursive';
+    color: rgba(221, 210, 49, 0.802);
+    font-size: 1.45em;
+
+}
+
+img.fruitroomicon {
+ 
+    max-width: 125.5px;
+    max-height: auto;
+    margin-left: 1em;
+
+}
+
+img.fruitroomicon:nth-of-type(1) {
+    margin-right: 1em;
+}
+
+
+div.fruitbuttonspace {
+    
+    margin: 1em;
+    text-align: center;
+    
+}
+
+
+
+
+div.center {
+    margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	float: none;
+}
+
+td.fruitroomcell {
+    display: inline-flex;
+    align-content: center;
+
+}
+
+section.fruitroomsection { 
+    margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	float: none;
+
+}
+
+
+a#fruitroomlink {
+    border-bottom: none;
+}
+
+div.content {
+    text-align: center;
+}
+
+#makegrey {
+    color: rgba(255,255,255,0.5);
+}

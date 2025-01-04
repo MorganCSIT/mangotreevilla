@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="images/mangologo.png" />
+    <title>Frequently Asked Questions</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <style>
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .faq-search {
+        margin-bottom: 20px;
+      }
+
+      .faq-search input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .faq-item {
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        display: block; /* Set to block by default */
+      }
+
+      .faq-question {
+        cursor: pointer;
+        padding: 15px;
+        background-color: #f7f7f7;
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-question::after {
+        content: "▼";
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-question.active::after {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 15px;
+        background-color: #f9f9f9;
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="index.html">Mango Tree Villa</a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="special">
+              <a href="#menu" class="menuToggle"><span>Menu</span></a>
+              <div id="menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="roomtypes.html">View Rooms</a></li>
+                  <li><a href="aboutus.html">About Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="maps.html">Map Guide</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <article id="main">
+        <header>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Find answers to the most common questions about our services and
+            facilities.
+          </p>
+        </header>
+        <section class="wrapper style5">
+          <div class="inner faq-container">
+            <!-- Search Box -->
+            <div class="faq-search">
+              <input
+                type="text"
+                id="faqSearch"
+                placeholder="What time is check-in?"
+                onkeyup="filterFAQs()"
+              />
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-item">
+              <div class="faq-question">What amenities are nearby?</div>
+              <div class="faq-answer">
+                There are numerous restaurants, massage shops, and local
+                attractions just up the hill. Our island map guide can help you
+                explore further.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Is the pool shared?</div>
+              <div class="faq-answer">
+                Yes, the pool is shared among seven units, including four
+                seaview and three non-seaview accommodations. The pool is rarely
+                crowded as most guests are often exploring Phuket.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What transport options are available?
+              </div>
+              <div class="faq-answer">
+                For transport, we recommend booking in advance with our
+                neighbor, Mr. A which has a network of trusted licenced taxi
+                drivers. Popular ride-hailing apps like Grab, Bolt, and InDrive
+                are also available. You can also rent motorbikes with Mr.A which
+                lives 20 meters from the villa
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">What is the check-in time?</div>
+              <div class="faq-answer">
+                Our check-in time starts at 2:00 PM. If you plan to come earlier
+                when the room is ready, we can store your bags while you enjoy
+                the pool
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Do you offer airport transportation?
+              </div>
+              <div class="faq-answer">
+                Yes, we offer airport transportation with our trusted neighbor
+                Mr.A, Please contact us with your flight details and we will
+                arrange for you, it costs 900 baht.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Are pets allowed in the villa?</div>
+              <div class="faq-answer">
+                Unfortunately, we do not allow pets in the villa to ensure
+                comfort and safety for all our guests.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">How often is cleaning provided?</div>
+              <div class="faq-answer">
+                We offer one free cleaning per week. Additional cleanings are
+                available for 400 baht per session.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Do you provide beach towels?</div>
+              <div class="faq-answer">
+                We do not offer beach towels, but we provide Thai-style beach
+                mats and yoga mats for guest use.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Is there a quiet time policy?</div>
+              <div class="faq-answer">
+                Yes, quiet hours are from 10:00 PM to 8:00 AM. While the lights
+                turn off at 10:00 PM, you are welcome to swim anytime as long as
+                you respect quiet hours.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Is there a laundry service available?
+              </div>
+              <div class="faq-answer">
+                We do not offer in-house laundry services. However, there are
+                several local laundry facilities nearby that offer quick service
+                by the kilo.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Is the beach safe for swimming?</div>
+              <div class="faq-answer">
+                Yes, the beach is safe year-round as it is protected by the bay.
+                During low tide, we recommend swimming about 200 meters to the
+                left to avoid rocky sand beds.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Can we drink the tap water?</div>
+              <div class="faq-answer">
+                Tap water is not drinkable but is safe for cooking. Bottled
+                water is readily available at 7-Eleven and Tops Daily minimarts
+                nearby.
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p id="makegrey"><i>Have a question? Contact us!</i></p>
+
+        <ul
+          class="icons"
+          style="
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+          "
+        >
+          <li>
+            <a
+              href="https://www.facebook.com/MangoTreeBeachVilla/?ref=py_c"
+              class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/mangotreevilla.hkt/"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:?cc=mangotreevillaphuket@gmail.com"
+              class="icon solid fa-envelope"
+              ><span class="label">Email Us</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://wa.me/+66810851211?text=I%20would%20like%20to%20ask%20for%20more%20information%20about%20your%20services"
+              class="icon brands fa-whatsapp"
+              ><span class="label">WhatsApp</span></a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // FAQ Toggle
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const answer = item.nextElementSibling;
+          item.classList.toggle("active");
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
+
+      // FAQ Search Filter
+      function filterFAQs() {
+        const searchValue = document
+          .getElementById("faqSearch")
+          .value.toLowerCase();
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+          const question = item
+            .querySelector(".faq-question")
+            .textContent.toLowerCase();
+          const answer = item
+            .querySelector(".faq-answer")
+            .textContent.toLowerCase();
+
+          if (question.includes(searchValue) || answer.includes(searchValue)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

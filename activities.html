@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="images/mangologo.png" />
+    <title>★MangoTreeVilla★ Excursions</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Main Container Styling */
+      .link-tree-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .link-tree-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .link-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      .link-item:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .link-item i {
+        font-size: 24px;
+        color: #0073e6;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+
+      .link-content {
+        flex: 1;
+      }
+
+      .link-item span {
+        font-size: 18px;
+        font-weight: bold;
+        color: #0073e6;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .link-description {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      /* Modal Styling */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 20px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        overflow: auto;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        color: #000; /* Set default text color to black for the modal */
+      }
+
+      .close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: #000;
+      }
+
+      .modal-header {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #0073e6; /* Header color set to blue */
+      }
+
+      .modal-details {
+        font-size: 14px;
+        color: #000; /* Set details text to black */
+        margin-bottom: 15px;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 14px;
+        color: #000; /* Set label text to black */
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #000; /* Set input text to black */
+      }
+
+      .book-now-btn {
+        background-color: #0073e6;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .book-now-btn:hover {
+        background-color: #005bb5;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Main Content -->
+      <article id="main">
+        <header>
+          <h2>Excursions & Activities</h2>
+        </header>
+        <section class="wrapper style5">
+          <div class="inner link-tree-container">
+            <p>
+              With the huge selection of companies available, we've handpicked
+              the best trips for quality and value! Enjoy exclusive agent
+              discounts, seamless transport, and the convenience of downloading
+              brochures with a click.
+              <br />
+              Have questions? Simply request a booking for your chosen trip and
+              include your questions in the note section.
+              <br />
+              "We do this because we want you to have the best experiences, and
+              yes, we also get tax write-offs."
+            </p>
+            <!-- Phi Phi Island Speedboat -->
+            <div
+              class="link-item"
+              onclick="openModal('Phi Phi Island Speedboat', '2500 THB per person', 'brochures/phiphi1.pdf')"
+            >
+              <i class="fas fa-ship"></i>
+              <div class="link-content">
+                <span>Phi Phi Island Speedboat</span>
+                <p class="link-description">
+                  Full-day tour with snorkeling and beach stops.<br />
+                  <strong>Price: 2500 THB per person</strong>
+                  <br />
+                  <strong> Leave@7:15 - Return@18:00</strong>
+                </p>
+              </div>
+            </div>
+
+            <!-- James Bond Island Speedboat -->
+            <div
+              class="link-item"
+              onclick="openModal('James Bond Island Speedboat', '2500 THB per person', 'brochures/jb1.pdf')"
+            >
+              <i class="fas fa-ship"></i>
+              <div class="link-content">
+                <span>James Bond Island Speedboat</span>
+                <p class="link-description">
+                  Visit the famous James Bond Island and explore nearby caves
+                  and lagoons.
+                  <br />
+                  <strong>Price: 2500 THB per person</strong>
+                  <br />
+                  <strong> Leave@9:00 - Return@18:00</strong>
+                </p>
+              </div>
+            </div>
+            <!-- Racha & Coral Island Catamaran -->
+            <div
+              class="link-item"
+              onclick="openModal('Racha,Coral island & Promthep Cape', '2600 THB per person', 'brochures/racha1.jpg')"
+            >
+              <i class="fas fa-ship"></i>
+              <div class="link-content">
+                <span>Racha & Coral island Catamaran Yacht</span>
+                <p class="link-description">
+                  Cruise in style aboard a Catamaran to see the crystal water
+                  landscapes in Koh Racha and Coral island
+                  <br />
+                  <strong>Price: 2600 THB per person</strong>
+                  <br />
+                  <strong> Leave@7:30 - Return@18:00</strong>
+                </p>
+              </div>
+            </div>
+            <!-- Similan Islands -->
+            <!-- Similan Island Trip -->
+            <div
+              class="link-item"
+              onclick="openModal('Similan Island Trip', '3500 THB per person', 'brochures/similan1.pdf')"
+            >
+              <i class="fas fa-ship"></i>
+              <div class="link-content">
+                <span>Similan Island Speedboat Adventure</span>
+                <p class="link-description">
+                  Embark on an unforgettable journey to the stunning Similan
+                  Islands. Explore the vibrant marine life and pristine beaches.
+                  <br />
+                  <strong>Price: 3600 THB per person</strong>
+                  <br />
+                  <strong>Leave@4:30 - Return@18:00</strong>
+                </p>
+              </div>
+            </div>
+            <!-- Elephant Sanctuary Phuket -->
+            <div
+              class="link-item"
+              onclick="openModal('Elephant Sanctuary Phuket', '3000 THB per person', 'brochures/elephant1.pdf')"
+            >
+              <i class="fas fa-paw"></i>
+              <div class="link-content">
+                <span>Elephant Sanctuary Experience</span>
+                <p class="link-description">
+                  Spend a day with gentle giants at the Elephant Sanctuary in
+                  Phuket. Learn about their care and conservation efforts.
+                  <br />
+                  <strong
+                    >Price: (Half day 2500THB) or (Fullday 4900THB) per
+                    person</strong
+                  >
+                  <br />
+                  <strong>Full day leave@6:00 - Return@18:00</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Modal Structure -->
+      <div id="bookingModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div class="modal-header" id="modalHeader"></div>
+          <p class="modal-details" id="modalDetails"></p>
+          <div id="brochureLink" style="margin-bottom: 15px">
+            <a
+              id="brochureDownload"
+              href="brochures/.jpg"
+              target="_blank"
+              download
+            >
+              Download Brochure
+            </a>
+          </div>
+          <form id="bookingForm">
+            <div class="form-group">
+              <label for="numPeople">Number of People</label>
+              <input
+                type="number"
+                id="numPeople"
+                min="1"
+                max="10"
+                value="1"
+                onchange="updateNameFields()"
+                required
+              />
+            </div>
+            <div id="nameFieldsContainer"></div>
+            <div class="form-group">
+              <label for="excursionDate">Excursion Date</label>
+              <input type="date" id="excursionDate" required />
+            </div>
+            <div class="form-group">
+              <label for="paymentDateTime">Payment Date and Time</label>
+              <input type="datetime-local" id="paymentDateTime" required />
+            </div>
+            <!-- New Question/Note Field -->
+            <div class="form-group">
+              <label for="questionsNotes">Questions or Notes</label>
+              <textarea id="questionsNotes" placeholder="" rows="4"></textarea>
+            </div>
+            <button
+              type="button"
+              class="book-now-btn"
+              onclick="sendToWhatsApp()"
+            >
+              Request Booking
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Modal and Dynamic Fields -->
+    <script>
+      function openModal(activityName, price, brochureLink) {
+        document.getElementById("modalHeader").innerText = activityName;
+        document.getElementById("modalDetails").innerText = " Price: " + price;
+        document.getElementById("brochureDownload").href = brochureLink;
+        document.getElementById("bookingModal").style.display = "block";
+        updateNameFields();
+      }
+
+      function closeModal() {
+        document.getElementById("bookingModal").style.display = "none";
+      }
+
+      function updateNameFields() {
+        const numPeople = document.getElementById("numPeople").value;
+        const container = document.getElementById("nameFieldsContainer");
+        container.innerHTML = "";
+        for (let i = 1; i <= numPeople; i++) {
+          const nameField = document.createElement("div");
+          nameField.className = "form-group";
+          nameField.innerHTML = `
+            <label for="userName${i}">Name of Person ${i}</label>
+            <input type="text" id="userName${i}" required />
+          `;
+          container.appendChild(nameField);
+        }
+      }
+
+      function sendToWhatsApp() {
+        const activity = document.getElementById("modalHeader").innerText;
+        const excursionDate = document.getElementById("excursionDate").value;
+        const paymentDateTime =
+          document.getElementById("paymentDateTime").value;
+        const questionsNotes = document.getElementById("questionsNotes").value;
+
+        const numPeople = document.getElementById("numPeople").value;
+
+        let names = "";
+        for (let i = 1; i <= numPeople; i++) {
+          const name = document.getElementById(`userName${i}`).value;
+          names += `Person ${i}: ${name}%0A`;
+        }
+
+        const message =
+          `Hello, I would like to book the ${activity}.%0A%0A` +
+          `Number of People: ${numPeople}%0A${names}` +
+          `Excursion Date: ${excursionDate}%0A` +
+          `Payment Date and Time: ${paymentDateTime}%0A` +
+          (questionsNotes ? `Questions/Notes: ${questionsNotes}%0A` : "");
+
+        const phone = "+66810851211"; // Replace with your WhatsApp number
+
+        window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+      }
+
+      window.onclick = function (event) {
+        const modal = document.getElementById("bookingModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
