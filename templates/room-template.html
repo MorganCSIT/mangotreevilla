@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="images/mangologo.png">
+    <title>★MangoTreeVilla★ - Room Name</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/room-page.css">
+    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://media.xmlcal.com/widget/1.00/js/bookWidget.min.js"></script>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header included from main template -->
+        
+        <article id="main">
+            <header>
+                <h2 class="room-title">Room Name</h2>
+                <p class="room-subtitle">Room Type Description</p>
+            </header>
+            
+            <section class="wrapper style5">
+                <div class="inner">
+                    <!-- Room Gallery -->
+                    <div class="room-gallery">
+                        <div class="room-gallery__grid">
+                            <img src="path/to/image1.jpg" alt="Room view" class="room-gallery__image">
+                            <img src="path/to/image2.jpg" alt="Room interior" class="room-gallery__image">
+                            <img src="path/to/image3.jpg" alt="Room bathroom" class="room-gallery__image">
+                            <img src="path/to/image4.jpg" alt="Room balcony" class="room-gallery__image">
+                        </div>
+                    </div>
+
+                    <!-- Room Information -->
+                    <div class="room-info">
+                        <div class="room-info__header">
+                            <h3 class="room-info__title">Room Details</h3>
+                            <span class="room-info__price">Starting from $XXX per night</span>
+                        </div>
+                        
+                        <div class="room-features">
+                            <div class="room-feature">
+                                <i class="fas fa-bed"></i>
+                                <span>King Size Bed</span>
+                            </div>
+                            <div class="room-feature">
+                                <i class="fas fa-wifi"></i>
+                                <span>Free WiFi</span>
+                            </div>
+                            <!-- Add more features -->
+                        </div>
+                    </div>
+
+                    <!-- Calendar Widget -->
+                    <div class="calendar-wrapper">
+                        <!-- Beds24 widget will be inserted here -->
+                    </div>
+
+                    <!-- Room Selector -->
+                    <div class="room-selector">
+                        <select>
+                            <option value="">Select Another Room</option>
+                            <!-- Room options -->
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Gallery Modal -->
+        <div class="gallery-modal">
+            <span class="gallery-modal__close">&times;</span>
+            <div class="gallery-modal__content">
+                <img src="" alt="Gallery image" class="gallery-modal__image">
+            </div>
+        </div>
+
+        <!-- Footer included from main template -->
+    </div>
+
+    <!-- Scripts -->
+    <script type="module">
+        import roomPage from './assets/js/room-page.js';
+        roomPage.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+:root {
+  /* Colors */
+  --color-primary: #21b2a6;
+  --color-primary-dark: #1a8f86;
+  --color-secondary: #505393;
+  --color-accent: #ed4933;
+  --color-background: #2e3842;
+  --color-text: #fff;
+  --color-text-light: rgba(255, 255, 255, 0.5);
+  --color-border: rgba(144, 144, 144, 0.25);
+
+  /* Typography */
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Courier New', monospace;
+  --font-size-base: 16px;
+  --font-size-small: 0.875rem;
+  --font-size-large: 1.125rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-weight-extra-bold: 800;
+  --line-height-base: 1.5;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Borders */
+  --border-radius-sm: 3px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* Z-indices */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal: 1040;
+  --z-index-popover: 1050;
+  --z-index-tooltip: 1060;
+}

@@ -1,0 +1,117 @@
+/* Component styles */
+.room-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+}
+
+.room-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-card__content {
+  padding: 1.5rem;
+}
+
+.room-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.room-card__description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background: #21b2a6;
+  color: white;
+}
+
+.btn--primary:hover {
+  background: #1a8f86;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #21b2a6;
+  outline: none;
+}
+
+/* Layout utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
