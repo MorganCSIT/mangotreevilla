@@ -8,16 +8,25 @@
   <head>
     <link rel="icon" type="image/png" href="images/mangologo.png" />
 
-    <title>Select Room</title>
+    <title>★MangoTreeVilla★</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!-- jQuery and jQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Beds24 Widget Script -->
+    <script src="https://media.xmlcal.com/widget/1.00/js/bookWidget.min.js"></script>
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
+    <style></style>
   </head>
   <body class="is-preload">
     <!-- Page Wrapper -->
@@ -32,7 +41,7 @@
               <div id="menu">
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="roomtypes.html">View Rooms</a></li>
+                  <li><a href="roomtypes.html">Unit Selection</a></li>
                   <li><a href="aboutus.html">About Us</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -45,83 +54,343 @@
       <!-- Main -->
       <article id="main">
         <header>
-          <h2>View Rooms</h2>
-          <p>Choose from a selection of 7 rooms</p>
+          <h3>Select your desired unit</h3>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              All Units
+            </button>
+            <button class="filter-btn" data-filter="no-seaview">
+              Standard
+            </button>
+            <button class="filter-btn" data-filter="seaview">Sea View</button>
+          </div>
+          <h4>Or...</h4>
+          <ul class="actions special">
+            <li>
+              <a
+                href="https://beds24.com/booking.php?propid=136057&referer=BookingLink"
+                class="button fit secondary"
+                >Select Multiple Units</a
+              >
+            </li>
+          </ul>
         </header>
         <section class="wrapper style5">
           <div class="inner">
-            <!-- <div class="box alt">
-              <div class="row gtr-50 gtr-uniform">
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/villalights.JPG" alt=""
-                  /></span>
-                </div>
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/u1balcony.JPG" alt=""
-                  /></span>
-                </div>
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/u1kitchen.jpg" alt=""
-                  /></span>
-                </div>
-              </div>
-            </div> -->
-            <div class="roomtypes-container">
-              <div class="room-section">
-                <h3 class="roomtype-header">Second Floor Seaview Studios</h3>
-                <div class="room">
-                  <img src="images/u1.jpg" alt="Top Floor Room 1" />
-                  <a href="u1 .html" class="details-button"
-                    >Check Availability<br
-                  /></a>
-                </div>
-                <div class="room">
-                  <img src="images/u2.jpg" alt="Top Floor Room 2" />
-                  <a href="./u2.html" class="details-button"
-                    >Check Availability<br
-                  /></a>
+            <div class="unit-container seaview">
+              <h3 class="unit-title">Second Floor Seaview Room 1 (U1)</h3>
+              <div class="box alt">
+                <!-- U1 Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u1.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u1balcony.JPG" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u1kitchen.jpg" alt=""
+                    /></span>
+                  </div>
                 </div>
               </div>
-              <div class="room-section">
-                <h3>Ground Floor Seaview Studios</h3>
-                <div class="room">
-                  <img src="images/d1.jpg" alt="Top Floor Room 1" />
-                  <a href="./d1.html" class="details-button"
-                    >Check Availability<br
-                  /></a>
-                </div>
-                <div class="room">
-                  <img src="images/d2.jpg" alt="Top Floor Room 2" />
-                  <a href="./d2.html" class="details-button"
-                    >Check Availability<br
-                  /></a>
+
+              <div class="calendar-center">
+                <!-- U1 Calendar -->
+                <div id="bookWidget-104579-136057-303573-1713969835"></div>
+
+                <script>
+                  jQuery(document).ready(function () {
+                    jQuery(
+                      "#bookWidget-104579-136057-303573-1713969835"
+                    ).bookWidget({
+                      roomid: 303573,
+                      defaultNumAdult: 2,
+                      defaultNumNight: 2,
+                      formAction: "https://beds24.com/booking.php",
+                      referer: "morgan",
+                      unavailableBackgroundColor: "#f4b0b0",
+                      widgetLang: "en",
+                      widgetType: "AvailabilityCalendar",
+                      width: "350px",
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+
+            <div class="unit-container seaview">
+              <h3 class="unit-title">Second Floor Seaview Room 2 (U2)</h3>
+              <div class="box alt">
+                <!-- U2 Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u2balcony.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u2kitchen.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u2.jpg" alt=""
+                    /></span>
+                  </div>
                 </div>
               </div>
-              <div class="room-section">
-                <h3>Beach & Pool Access Units</h3>
-                <div class="room">
-                  <a href="./u3.html">
-                    <img src="images/u3.jpg" alt="Top Floor Room 1" />
-                    <a href="./u3.html" class="details-button"
-                      >Check Availability<br
-                    /></a>
-                  </a>
+              <div class="calendar-center">
+                <!-- U2 Calendar -->
+                <div id="bookWidget-104579-136057-303568-1713969879">u2</div>
+                <script>
+                  jQuery(document).ready(function () {
+                    jQuery(
+                      "#bookWidget-104579-136057-303568-1713969879"
+                    ).bookWidget({
+                      roomid: 303568,
+                      defaultNumAdult: 2,
+                      defaultNumNight: 2,
+                      formAction: "https://beds24.com/booking.php",
+                      referer: "morgan",
+                      unavailableBackgroundColor: "#f4b0b0",
+                      widgetLang: "en",
+                      widgetType: "AvailabilityCalendar",
+                      width: "350px",
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+
+            <div class="unit-container seaview">
+              <h3 class="unit-title">Ground Floor Seaview Room 1 (D1)</h3>
+              <div class="box alt">
+                <!-- D1 Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/d1balcony.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/d1kitchen.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/d1.jpg" alt=""
+                    /></span>
+                  </div>
                 </div>
-                <div class="room">
-                  <img src="images/u4.jpg" alt="Top Floor Room 2" />
-                  <a href="./u4.html" class="details-button"
-                    >Check Availability<br
-                  /></a>
+                <div class="calendar-center">
+                  <!-- D1 Calendar -->
+                  <div id="bookWidget-104579-136057-303582-1713969920"></div>
+                  <script>
+                    jQuery(document).ready(function () {
+                      jQuery(
+                        "#bookWidget-104579-136057-303582-1713969920"
+                      ).bookWidget({
+                        roomid: 303582,
+                        defaultNumAdult: 2,
+                        defaultNumNight: 2,
+                        formAction: "https://beds24.com/booking.php",
+                        referer: "morgan",
+                        unavailableBackgroundColor: "#f4b0b0",
+                        widgetLang: "en",
+                        widgetType: "AvailabilityCalendar",
+                        width: "350px",
+                      });
+                    });
+                  </script>
                 </div>
-                <div class="room">
-                  <img src="images/db.jpg" alt="Top Floor Room 2" />
-                  <a href="./db.html" class="details-button"
-                    >Check Availability <br />
-                  </a>
+              </div>
+            </div>
+
+            <div class="unit-container seaview">
+              <h3 class="unit-title">Ground Floor Seaview Room 2 (D2)</h3>
+              <div class="box alt">
+                <!-- D2 Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/d2balcony.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/d2kitchen.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/d2.jpg" alt=""
+                    /></span>
+                  </div>
                 </div>
+              </div>
+              <div class="calendar-center">
+                <!-- D2 Calendar -->
+                <div id="bookWidget-104579-136057-303581-1713969963"></div>
+                <script>
+                  jQuery(document).ready(function () {
+                    jQuery(
+                      "#bookWidget-104579-136057-303581-1713969963"
+                    ).bookWidget({
+                      roomid: 303581,
+                      defaultNumAdult: 2,
+                      defaultNumNight: 2,
+                      formAction: "https://beds24.com/booking.php",
+                      referer: "morgan",
+                      unavailableBackgroundColor: "#f4b0b0",
+                      widgetLang: "en",
+                      widgetType: "AvailabilityCalendar",
+                      width: "350px",
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+
+            <div class="unit-container no-seaview">
+              <h3 class="unit-title">Beach & Pool Access Studio 1 (U3)</h3>
+              <div class="box alt">
+                <!-- U3 Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u3kitchen.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u3.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u3stairs.jpg" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-center">
+                <!-- U3 Calendar -->
+                <div id="bookWidget-104579-136057-303570-1713970007"></div>
+                <script>
+                  jQuery(document).ready(function () {
+                    jQuery(
+                      "#bookWidget-104579-136057-303570-1713970007"
+                    ).bookWidget({
+                      roomid: 303570,
+                      defaultNumAdult: 2,
+                      defaultNumNight: 2,
+                      formAction: "https://beds24.com/booking.php",
+                      referer: "morgan",
+                      unavailableBackgroundColor: "#f4b0b0",
+                      widgetLang: "en",
+                      widgetType: "AvailabilityCalendar",
+                      width: "350px",
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+
+            <div class="unit-container no-seaview">
+              <h3 class="unit-title">Beach & Pool Access Studio 2 (U4)</h3>
+              <div class="box alt">
+                <!-- U4 Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u4kitchen.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u4.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/u3stairs.jpg" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-center">
+                <!-- U4 Calendar -->
+                <div id="bookWidget-104579-136057-326153-1713970060"></div>
+                <script>
+                  jQuery(document).ready(function () {
+                    jQuery(
+                      "#bookWidget-104579-136057-326153-1713970060"
+                    ).bookWidget({
+                      roomid: 326153,
+                      defaultNumAdult: 2,
+                      defaultNumNight: 2,
+                      formAction: "https://beds24.com/booking.php",
+                      referer: "morgan",
+                      unavailableBackgroundColor: "#f4b0b0",
+                      widgetLang: "en",
+                      widgetType: "AvailabilityCalendar",
+                      width: "350px",
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+
+            <div class="unit-container no-seaview">
+              <h3 class="unit-title">Beach & Pool Access Studio 3 (DB)</h3>
+              <div class="box alt">
+                <!-- DB Images -->
+                <div class="row gtr-50 gtr-uniform">
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/dbbedroom.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/dbliving.jpg" alt=""
+                    /></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="image fit"
+                      ><img src="images/dbaccess.jpg" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div class="calendar-center">
+                <!-- DB Calendar -->
+                <div id="bookWidget-104579-136057-327385-1713970118"></div>
+                <script>
+                  jQuery(document).ready(function () {
+                    jQuery(
+                      "#bookWidget-104579-136057-327385-1713970118"
+                    ).bookWidget({
+                      roomid: 327385,
+                      defaultNumAdult: 2,
+                      defaultNumNight: 2,
+                      formAction: "https://beds24.com/booking.php",
+                      referer: "morgan",
+                      unavailableBackgroundColor: "#f4b0b0",
+                      widgetLang: "en",
+                      widgetType: "AvailabilityCalendar",
+                      width: "350px",
+                    });
+                  });
+                </script>
               </div>
             </div>
           </div>
@@ -175,12 +444,59 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script defer>
+      function loadCalendar(roomId, calendarId) {
+        var calendarDiv = document.getElementById(calendarId);
+        if (calendarDiv.style.display === "none") {
+          calendarDiv.style.display = "block";
+          if (!calendarDiv.getAttribute("data-initialized")) {
+            $(calendarDiv).bookWidget({
+              roomid: roomId,
+              formAction: "https://beds24.com/booking.php",
+              widgetLang: "en",
+              widgetType: "AvailabilityCalendar",
+              width: "100%", // Making it responsive
+            });
+            calendarDiv.setAttribute("data-initialized", "true");
+          }
+        } else {
+          calendarDiv.style.display = "none";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const units = document.querySelectorAll(".unit-container");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            // Add active class to clicked button
+            btn.classList.add("active");
+
+            const filter = btn.getAttribute("data-filter");
+
+            units.forEach((unit) => {
+              if (filter === "all") {
+                unit.classList.remove("hidden");
+              } else {
+                if (unit.classList.contains(filter)) {
+                  unit.classList.remove("hidden");
+                } else {
+                  unit.classList.add("hidden");
+                }
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
