@@ -26,159 +26,9 @@
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
-    <style>
-      /* Modal styles */
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 1000;
-      }
-
-      .modal-content {
-        position: relative;
-        background-color: #2e3842;
-        margin: 15% auto;
-        padding: 2em;
-        width: 80%;
-        max-width: 500px;
-        border-radius: 5px;
-        text-align: center;
-        color: #fff;
-      }
-
-      .close-modal {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        font-size: 24px;
-        cursor: pointer;
-        color: #fff;
-      }
-
-      .modal-button {
-        display: inline-block;
-        margin-top: 1em;
-      }
-
-      /* Filter button styles to match special action buttons */
-      .filter-buttons {
-        margin: 1em 0;
-        display: flex;
-        justify-content: center;
-        gap: 0.5em;
-        flex-wrap: wrap;
-      }
-
-      .filter-btn {
-        background-color: transparent;
-
-        color: rgba(255, 255, 255, 0.8);
-        padding: 0 1.5em;
-        height: 3em;
-        line-height: 2.85em;
-        letter-spacing: 0.075em;
-        text-transform: uppercase;
-        border-radius: 2px;
-        cursor: pointer;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-      }
-
-      .filter-btn:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-      }
-
-      .filter-btn.active {
-        background-color: #fff;
-        color: #2e3842;
-      }
-
-      .hidden {
-        display: none !important;
-      }
-
-      @media screen and (max-width: 480px) {
-        .filter-buttons {
-          flex-direction: column;
-          align-items: stretch;
-          padding: 0 1em;
-        }
-
-        .filter-btn {
-          width: 100%;
-          margin: 0.25em 0;
-        }
-      }
-
-      /* Lightbox styles */
-      .lightbox {
-        display: none;
-        position: fixed;
-        z-index: 999999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-      }
-
-      .lightbox.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .lightbox img {
-        max-width: 90%;
-        max-height: 90vh;
-        margin: auto;
-        display: block;
-        object-fit: contain;
-      }
-
-      .lightbox-close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: #fff;
-        font-size: 30px;
-        cursor: pointer;
-        border: none;
-        background: none;
-        padding: 0;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-      }
-
-      .image.fit {
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-      }
-
-      .image.fit:hover {
-        opacity: 0.8;
-      }
-    </style>
+    <style></style>
   </head>
   <body class="is-preload">
-    <!-- Add this right after the opening body tag -->
-    <div class="lightbox">
-      <button class="lightbox-close">&times;</button>
-      <img src="" alt="Enlarged image" />
-    </div>
-
     <!-- Page Wrapper -->
     <div id="page-wrapper">
       <!-- Header -->
@@ -191,7 +41,7 @@
               <div id="menu">
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="roomtypes.html">View Units</a></li>
+                  <li><a href="roomtypes.html">View Rooms</a></li>
                   <li><a href="aboutus.html">About Us</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -204,27 +54,14 @@
       <!-- Main -->
       <article id="main">
         <header>
-          <!-- <h3>Select your desired unit</h3> -->
           <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">
               All Units
             </button>
+            <button class="filter-btn" data-filter="seaview">Sea View</button>
             <button class="filter-btn" data-filter="no-seaview">
               Standard
             </button>
-            <button class="filter-btn" data-filter="seaview">SeaView</button>
-          </div>
-          <h4>Or...</h4>
-          <div class="filter-buttons">
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://beds24.com/booking.php?propid=136057&referer=BookingLink"
-                  class="button fit secondary"
-                  >Select Multiple Units</a
-                >
-              </li>
-            </ul>
           </div>
         </header>
         <section class="wrapper style5">
@@ -239,7 +76,6 @@
                       ><img src="images/u1.jpg" alt=""
                     /></span>
                   </div>
-
                   <div class="col-6">
                     <span class="image fit"
                       ><img src="images/u1balcony.JPG" alt=""
@@ -250,14 +86,12 @@
                       ><img src="images/u1kitchen.jpg" alt=""
                     /></span>
                   </div>
-                  <div class="calendar-center">
-                    <div id="bookWidget-104579-136057-303573-1713969835"></div>
-                  </div>
                 </div>
               </div>
 
               <div class="calendar-center">
                 <!-- U1 Calendar -->
+                <div id="bookWidget-104579-136057-303573-1713969835"></div>
 
                 <script>
                   jQuery(document).ready(function () {
@@ -299,12 +133,11 @@
                       ><img src="images/u2.jpg" alt=""
                     /></span>
                   </div>
-                  <div id="bookWidget-104579-136057-303568-1713969879">u2</div>
                 </div>
               </div>
               <div class="calendar-center">
                 <!-- U2 Calendar -->
-
+                <div id="bookWidget-104579-136057-303568-1713969879">u2</div>
                 <script>
                   jQuery(document).ready(function () {
                     jQuery(
@@ -345,11 +178,10 @@
                       ><img src="images/d1.jpg" alt=""
                     /></span>
                   </div>
-                  <div id="bookWidget-104579-136057-303582-1713969920"></div>
                 </div>
                 <div class="calendar-center">
                   <!-- D1 Calendar -->
-
+                  <div id="bookWidget-104579-136057-303582-1713969920"></div>
                   <script>
                     jQuery(document).ready(function () {
                       jQuery(
@@ -391,12 +223,11 @@
                       ><img src="images/d2.jpg" alt=""
                     /></span>
                   </div>
-                  <div id="bookWidget-104579-136057-303581-1713969963"></div>
                 </div>
               </div>
               <div class="calendar-center">
                 <!-- D2 Calendar -->
-
+                <div id="bookWidget-104579-136057-303581-1713969963"></div>
                 <script>
                   jQuery(document).ready(function () {
                     jQuery(
@@ -437,12 +268,11 @@
                       ><img src="images/u3stairs.jpg" alt=""
                     /></span>
                   </div>
-                  <div id="bookWidget-104579-136057-303570-1713970007"></div>
                 </div>
               </div>
               <div class="calendar-center">
                 <!-- U3 Calendar -->
-
+                <div id="bookWidget-104579-136057-303570-1713970007"></div>
                 <script>
                   jQuery(document).ready(function () {
                     jQuery(
@@ -483,12 +313,11 @@
                       ><img src="images/u3stairs.jpg" alt=""
                     /></span>
                   </div>
-                  <div id="bookWidget-104579-136057-326153-1713970060"></div>
                 </div>
               </div>
               <div class="calendar-center">
                 <!-- U4 Calendar -->
-
+                <div id="bookWidget-104579-136057-326153-1713970060"></div>
                 <script>
                   jQuery(document).ready(function () {
                     jQuery(
@@ -529,12 +358,11 @@
                       ><img src="images/dbaccess.jpg" alt=""
                     /></span>
                   </div>
-                  <div id="bookWidget-104579-136057-327385-1713970118"></div>
                 </div>
               </div>
               <div class="calendar-center">
                 <!-- DB Calendar -->
-
+                <div id="bookWidget-104579-136057-327385-1713970118"></div>
                 <script>
                   jQuery(document).ready(function () {
                     jQuery(
@@ -604,24 +432,6 @@
       </footer>
     </div>
 
-    <!-- Modal for Multiple Units Selection -->
-    <div id="multipleUnitsModal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h3>To book multiple units...</h3>
-
-        <p>
-          <i>
-            Please change the 'Book Multiple' option to 'Yes' and choose
-            'Quantity = 1' to select the units
-          </i>
-        </p>
-        <button class="button fit secondary" id="continueToBooking">
-          Continue to Booking
-        </button>
-      </div>
-    </div>
-
     <!-- Scripts -->
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -650,28 +460,23 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        // Filter functionality
         const filterBtns = document.querySelectorAll(".filter-btn");
         const units = document.querySelectorAll(".unit-container");
 
-        // Initialize - show all units
-        units.forEach((unit) => unit.classList.remove("hidden"));
-
         filterBtns.forEach((btn) => {
-          btn.addEventListener("click", function () {
+          btn.addEventListener("click", () => {
             // Remove active class from all buttons
             filterBtns.forEach((b) => b.classList.remove("active"));
-
             // Add active class to clicked button
-            this.classList.add("active");
+            btn.classList.add("active");
 
-            const filterValue = this.getAttribute("data-filter");
+            const filter = btn.getAttribute("data-filter");
 
             units.forEach((unit) => {
-              if (filterValue === "all") {
+              if (filter === "all") {
                 unit.classList.remove("hidden");
               } else {
-                if (unit.classList.contains(filterValue)) {
+                if (unit.classList.contains(filter)) {
                   unit.classList.remove("hidden");
                 } else {
                   unit.classList.add("hidden");
@@ -679,68 +484,6 @@
               }
             });
           });
-        });
-
-        // Rest of your existing modal code...
-        // Get modal elements
-        const modal = document.getElementById("multipleUnitsModal");
-        const multipleUnitsBtn = document.querySelector(
-          'a[href="https://beds24.com/booking.php?propid=136057&referer=BookingLink"]'
-        );
-        const closeBtn = document.querySelector(".close-modal");
-        const continueBtn = document.getElementById("continueToBooking");
-
-        // Prevent default link behavior and show modal instead
-        multipleUnitsBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          modal.style.display = "block";
-        });
-
-        // Close modal when clicking the X
-        closeBtn.addEventListener("click", function () {
-          modal.style.display = "none";
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener("click", function (e) {
-          if (e.target === modal) {
-            modal.style.display = "none";
-          }
-        });
-
-        // Handle continue button click
-        continueBtn.addEventListener("click", function () {
-          window.location.href =
-            "https://beds24.com/booking.php?propid=136057&referer=BookingLink";
-        });
-
-        // Lightbox functionality
-        const images = document.querySelectorAll(".image.fit img");
-        const lightbox = document.querySelector(".lightbox");
-        const lightboxImg = lightbox.querySelector("img");
-        const lightboxCloseBtn = lightbox.querySelector(".lightbox-close");
-
-        images.forEach((img) => {
-          img.addEventListener("click", function () {
-            lightboxImg.src = this.src;
-            lightbox.classList.add("active");
-          });
-        });
-
-        lightboxCloseBtn.addEventListener("click", function () {
-          lightbox.classList.remove("active");
-        });
-
-        lightbox.addEventListener("click", function (e) {
-          if (e.target === lightbox) {
-            lightbox.classList.remove("active");
-          }
-        });
-
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && lightbox.classList.contains("active")) {
-            lightbox.classList.remove("active");
-          }
         });
       });
     </script>
